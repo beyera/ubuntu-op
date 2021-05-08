@@ -28,7 +28,3 @@ jobs:
           private_key: ${{ secrets.PRIVATE_KEY }}
           scp_source: scripts/ubuntu-op-latest.iso
           scp_target: ${{ secrets.UBUNTU_OP_TARGET }}
-          before_script: |
-            ls -hl scripts/
-          after_script: |
-            whoami
