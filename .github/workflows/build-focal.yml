@@ -1,12 +1,12 @@
 name: build-focal
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-  workflow_dispatch:
-
+  
 jobs:
   build:
     runs-on: ubuntu-20.04
