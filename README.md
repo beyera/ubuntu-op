@@ -10,7 +10,7 @@ A custom-built version of Ubuntu with 1Password for Linux and 1Password official
   - Firefox Stable
   - Google Chrome Stable
   - Microsoft Edge Beta
-  - Brave Stable (1Password not installed by default #1)
+  - Brave Stable (1Password [not installed by default](https://github.com/beyera/ubuntu-op/issues/1))
 
 ## WHEN: Should you use this?
 
