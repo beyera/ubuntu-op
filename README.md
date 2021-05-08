@@ -23,4 +23,4 @@ The artifacts built by this project installs code from multiple open source proj
 
 ## Disclaimer
 
-This project is not officially endorsed by any of the companies listed above. Please use any generated artifacts as your own risk.
+This project is not officially endorsed by any of the companies listed above. Please use any generated artifacts at your own risk.
