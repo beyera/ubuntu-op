@@ -22,3 +22,8 @@ jobs:
       - name: Debug
         run: |
           ls -hl scripts/
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ubuntu-op-latest
+          path: scripts/ubuntu-op-latest.iso
