@@ -47,7 +47,7 @@ A few reasons:
 - **Andrew Beyer** - Maintainer of this fork and developer of customizations.
 - **Marcos Vallim** - All credit for the underlying scripts and awesome documentation goes to to [mvallim](https://github.com/mvallim) and the other [contributors](https://github.com/mvallim/live-custom-ubuntu-from-scratch/blob/master/CONTRIBUTORS.txt) of [mvallim/live-custom-ubuntu-from-scratch](https://github.com/mvallim/live-custom-ubuntu-from-scratch).
 
-## Todo
+## TODO
 
 - Create SHA256 checksum and sign it using GPG on every iso creation.
 - Test updating to Ubuntu 21.04
