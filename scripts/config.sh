@@ -90,6 +90,7 @@ function install_b5x() {
 }
 
 function customize_gnome() {
+    mkdir -p /etc/dconf/db/local.d
     cat <<EOF >/etc/dconf/db/local.d/00-favorite-apps
 [org/gnome/shell]
 favorite-apps = ['1password.desktop', 'brave-browser.desktop', 'firefox.desktop', 'google-chrome.desktop', 'microsoft-edge.desktop']
