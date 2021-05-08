@@ -1,6 +1,6 @@
 # Ubuntu OP
 
-A custom-built version of Ubuntu with 1Password for Linux and 1Password officially supported browsers preinstalled. This aids in testing via a reproducible environment and provides a quick way for folks not familiar with Linux to try 1Password for Linux.
+A custom-built version of Ubuntu Desktop with 1Password for Linux and 1Password officially supported browsers preinstalled. This aids in testing via a reproducible environment and provides a quick way for folks not familiar with Linux to try 1Password for Linux.
 
 ## WHAT: Is included?
 
