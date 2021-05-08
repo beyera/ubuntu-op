@@ -19,7 +19,7 @@ A custom-built version of Ubuntu Desktop with 1Password for Linux and 1Password 
 ## WHEN: Should you use this?
 
 - To try out 1Password for Linux without needing to fuss about how to install applications on Linux.
-- You need a quickly bootstrap a VM and run 1Password.
+- You need to quickly bootstrap a VM and run 1Password.
 - You use 1Password and Ubuntu and want a ton of browsers installed by default.
 - Testing 1Password in a clean and reproducible environment.
 
