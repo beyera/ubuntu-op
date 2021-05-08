@@ -65,7 +65,7 @@ function install_edge() {
     sudo apt install -y microsoft-edge-beta
 }
 
-# Install Google Chrome (beta)
+# Install Google Chrome
 function install_google_chrome() {
     # gpg key
     curl -s https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
