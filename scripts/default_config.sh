@@ -33,19 +33,28 @@ export TARGET_PACKAGE_REMOVE="
 "
 
 function install_1password() {
-    # Add 1Password repo
-    # https://support.1password.com/getting-started-linux/
-    # Add the key for the 1Password apt repository:
+    # gpg key
     curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
-    # Add the 1Password beta apt repository:
+    # deb repo
     echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 beta main' | sudo tee /etc/apt/sources.list.d/1password.list
-    # Add the debsig-verify policy:
+    # debsig-verify policy
     sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
     curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
     sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
     curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
-
+    # install
+    apt-get update
     apt-get install -y 1password
+}
+
+function insall_brave() {
+    # gpg key
+    curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+    # deb repo
+    echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+    # install
+    apt-get update
+    apt-get install -y brave-browser
 }
 
 # Package customisation function.  Update this function to customize packages
@@ -62,6 +71,7 @@ function customize_image() {
         clamav-daemon \
         terminator \
         apt-transport-https \
+        software-properties-common \
         curl \
         vim \
         nano \
@@ -71,6 +81,7 @@ function customize_image() {
     install_1password
 
     # install browsers
+    install_brave
 
     # purge
     apt-get purge -y \
