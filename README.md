@@ -2,6 +2,9 @@
 
 A custom-built version of Ubuntu Desktop with 1Password for Linux and 1Password officially supported browsers preinstalled. This aids in testing via a reproducible environment and provides a quick way for folks not familiar with Linux to try 1Password for Linux.
 
+<p align="center">
+   <img src="images/ubuntu-op.png">
+</p>
 ## WHAT: Is included?
 
 - An up to date version of Ubuntu 20.10 for x86_64
@@ -39,7 +42,7 @@ I guess you could technically burn it to one of those DVD things too, but that f
 A few reasons:
 
 - Github has actions that are entirely free for public repositories. With a little bit of automation magic, I now have an up-to-date version of Ubuntu with the latest version of 1Password and supported browsers.
-- I [came across someone who did](https://github.com/mvallim/live-custom-ubuntu-from-scratch) a lot of the hard work creating the underlying scripts which allowed me to create a 1Password version of Ubuntu quickly. 
+- I [came across someone who did](https://github.com/mvallim/live-custom-ubuntu-from-scratch) a lot of the hard work creating the underlying scripts which allowed me to create a 1Password version of Ubuntu quickly.
 - I couldn't sleep because my brain wanted to do this.
 
 ## WHO: Made it?
