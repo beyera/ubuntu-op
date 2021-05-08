@@ -89,6 +89,13 @@ function install_b5x() {
     echo '{"policies":{"Extensions":{"Install":["https://s3.amazonaws.com/com.1password.b5x/firefox/beta/latest.xpi"]}}}' | sudo tee /usr/lib/firefox/distribution/policies.json
 }
 
+function customize_gnome() {
+    cat <<EOF >/etc/dconf/db/local.d/00-favorite-apps
+[org/gnome/shell]
+favorite-apps = ['1password.desktop', 'brave-browser.desktop', 'firefox.desktop', 'google-chrome.desktop', 'microsoft-edge.desktop']
+EOF
+}
+
 # Package customisation function.  Update this function to customize packages
 # present on the installed system.
 function customize_image() {
@@ -117,6 +124,9 @@ function customize_image() {
     install_brave
     install_google_chrome
     install_b5x
+
+    # 1Password flare
+    customize_gnome
 
     # purge
     apt purge -y \
