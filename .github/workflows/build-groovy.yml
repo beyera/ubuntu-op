@@ -18,6 +18,22 @@ jobs:
         run: |
           cd scripts
           ./build.sh -
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ubuntu-op-latest
+          path: scripts/ubuntu-op-latest.iso
+          
+      - uses: mdallasanta/ssh-scp-deploy@{version}
+        with:
+          local: './scripts'                                              
+          remote: ${{ secrets.UBUNTU_OP_TARGET }}                                      
+          host: ${{secrets.HOST}}                              
+          port: ${{secrets.PORT}}                     
+          user: ${{secrets.USER}}                        
+          password: ${{secrets.PASSWORD}}                        
+          key: ${{secrets.KEY}}                                 
+          pre_upload: ls -alh
 
       - name: Deploy
         uses: kostya-ten/ssh-server-deploy@v4
