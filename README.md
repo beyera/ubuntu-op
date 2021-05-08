@@ -54,7 +54,7 @@ A few reasons:
 - Some fun customizations
   - Default wallpaper
   - Add 1Password to Gnome Dash
-- Create a sweet landing/download page. In the meantime, you can grab the [latest version here](https://1pw.dev/download/ubuntu-op-latest.iso).
+- Create a sweet landing/download page. In the meantime, you can grab the [latest version here](https://1pw.dev/download/ubuntu-op-amd64-latest.iso).
 
 ## License
 
