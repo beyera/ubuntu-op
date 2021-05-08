@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -e                  # exit on error
-set -o pipefail         # exit on pipeline error
-set -u                  # treat unset variable as error
+set -e          # exit on error
+set -o pipefail # exit on pipeline error
+set -u          # treat unset variable as error
 #set -x
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -31,12 +31,12 @@ function help() {
 }
 
 function find_index() {
-    local ret;
-    local i;
-    for ((i=0; i<${#CMD[*]}; i++)); do
+    local ret
+    local i
+    for ((i = 0; i < ${#CMD[*]}; i++)); do
         if [ "${CMD[i]}" == "$1" ]; then
-            index=$i;
-            return;
+            index=$i
+            return
         fi
     done
     help "Command not found : $1"
@@ -55,7 +55,7 @@ function check_host() {
 function setup_host() {
     echo "=====> running setup_host ..."
 
-   cat <<EOF > /etc/apt/sources.list
+    cat <<EOF >/etc/apt/sources.list
 deb http://us.archive.ubuntu.com/ubuntu/ $TARGET_UBUNTU_VERSION main restricted universe multiverse
 deb-src http://us.archive.ubuntu.com/ubuntu/ $TARGET_UBUNTU_VERSION main restricted universe multiverse
 
@@ -66,14 +66,14 @@ deb http://us.archive.ubuntu.com/ubuntu/ $TARGET_UBUNTU_VERSION-updates main res
 deb-src http://us.archive.ubuntu.com/ubuntu/ $TARGET_UBUNTU_VERSION-updates main restricted universe multiverse
 EOF
 
-    echo "$TARGET_NAME" > /etc/hostname
+    echo "$TARGET_NAME" >/etc/hostname
 
     # we need to install systemd first, to configure machine id
     apt-get update
     apt-get install -y libterm-readline-gnu-perl systemd-sysv
 
     #configure machine id
-    dbus-uuidgen > /etc/machine-id
+    dbus-uuidgen >/etc/machine-id
     ln -fs /etc/machine-id /var/lib/dbus/machine-id
 
     # don't understand why, but multiple sources indicate this
@@ -83,16 +83,15 @@ EOF
 
 # Load configuration values from file
 function load_config() {
-    if [[ -f "$SCRIPT_DIR/config.sh" ]]; then 
+    if [[ -f "$SCRIPT_DIR/config.sh" ]]; then
         . "$SCRIPT_DIR/config.sh"
     elif [[ -f "$SCRIPT_DIR/default_config.sh" ]]; then
         . "$SCRIPT_DIR/default_config.sh"
     else
-        >&2 echo "Unable to find default config file  $SCRIPT_DIR/default_config.sh, aborting."
+        echo >&2 "Unable to find default config file  $SCRIPT_DIR/default_config.sh, aborting."
         exit 1
     fi
 }
-
 
 function install_pkg() {
     echo "=====> running install_pkg ... will take a long time ..."
@@ -100,30 +99,30 @@ function install_pkg() {
 
     # install live packages
     apt-get install -y \
-    sudo \
-    ubuntu-standard \
-    casper \
-    lupin-casper \
-    discover \
-    laptop-detect \
-    os-prober \
-    network-manager \
-    resolvconf \
-    net-tools \
-    wireless-tools \
-    wpagui \
-    locales
-    
+        sudo \
+        ubuntu-standard \
+        casper \
+        lupin-casper \
+        discover \
+        laptop-detect \
+        os-prober \
+        network-manager \
+        resolvconf \
+        net-tools \
+        wireless-tools \
+        wpagui \
+        locales
+
     # install kernel
     apt-get install -y --install-recommends $TARGET_KERNEL_PACKAGE
 
     # graphic installer - ubiquity
     apt-get install -y \
-    ubiquity \
-    ubiquity-casper \
-    ubiquity-frontend-gtk \
-    ubiquity-slideshow-ubuntu \
-    ubiquity-ubuntu-artwork
+        ubiquity \
+        ubiquity-casper \
+        ubiquity-frontend-gtk \
+        ubiquity-slideshow-ubuntu \
+        ubiquity-ubuntu-artwork
 
     # Call into config function
     customize_image
@@ -136,7 +135,7 @@ function install_pkg() {
     dpkg-reconfigure resolvconf
 
     # network manager
-    cat <<EOF > /etc/NetworkManager/NetworkManager.conf
+    cat <<EOF >/etc/NetworkManager/NetworkManager.conf
 [main]
 rc-manager=resolvconf
 plugins=ifupdown,keyfile
@@ -151,7 +150,7 @@ EOF
     apt-get clean -y
 }
 
-function finish_up() { 
+function finish_up() {
     echo "=====> finish_up"
 
     # truncate machine id (why??)
@@ -176,8 +175,7 @@ if [[ $# == 0 || $# > 3 ]]; then help; fi
 dash_flag=false
 start_index=0
 end_index=${#CMD[*]}
-for ii in "$@";
-do
+for ii in "$@"; do
     if [[ $ii == "-" ]]; then
         dash_flag=true
         continue
@@ -186,7 +184,7 @@ do
     if [[ $dash_flag == false ]]; then
         start_index=$index
     else
-        end_index=$(($index+1))
+        end_index=$(($index + 1))
     fi
 done
 if [[ $dash_flag == false ]]; then
@@ -194,9 +192,8 @@ if [[ $dash_flag == false ]]; then
 fi
 
 # loop through the commands
-for ((ii=$start_index; ii<$end_index; ii++)); do
+for ((ii = $start_index; ii < $end_index; ii++)); do
     ${CMD[ii]}
 done
 
 echo "$0 - Initial build is done!"
-

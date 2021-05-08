@@ -22,7 +22,7 @@ Syntax: ./build.sh [start_cmd] [-] [end_cmd]
 
 ## How to Update
 
-The configuration script is versioned with the variable CONFIG_FILE_VERSION.  Any time that the configuration
-format is changed in `default_config.sh`, this value is bumped.  Once this happens `config.sh` must be updated manually
-from the default file to ensure the new/changed variables are as desired.  Once the merge is complete the `config.sh` file's
+The configuration script is versioned with the variable CONFIG_FILE_VERSION. Any time that the configuration
+format is changed in `default_config.sh`, this value is bumped. Once this happens `config.sh` must be updated manually
+from the default file to ensure the new/changed variables are as desired. Once the merge is complete the `config.sh` file's
 CONFIG_FILE_VERSION should match the default and the build will run.
