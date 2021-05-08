@@ -10,7 +10,7 @@ export TARGET_KERNEL_PACKAGE="linux-generic"
 
 # The file (no extension) of the ISO containing the generated disk image,
 # the volume id, and the hostname of the live environment are set from this name.
-export TARGET_NAME="ubuntu-op-latest"
+export TARGET_NAME="ubuntu-op-amd64-latest"
 
 # The text label shown in GRUB for booting into the live environment
 export GRUB_LIVEBOOT_LABEL="Try Ubuntu OP without installing"
@@ -62,7 +62,7 @@ function install_edge() {
     sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
     # install
     apt update
-    sudo apt install microsoft-edge-dev
+    sudo apt install -y microsoft-edge-beta
 }
 
 # Install Google Chrome (beta)
