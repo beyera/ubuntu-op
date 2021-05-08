@@ -1,10 +1,11 @@
 # Ubuntu OP
 
-A custom-built version of Ubuntu Desktop with 1Password for Linux and 1Password officially supported browsers preinstalled. This aids in testing via a reproducible environment and provides a quick way for folks not familiar with Linux to try 1Password for Linux.
+A custom-built version of Ubuntu Desktop with 1Password for Linux and 1Password officially supported browsers preinstalled. Ubuntu OP is ideal for testing as a live reproducible environment or provides a quick way for folks not familiar with Linux to install Ubuntu with 1Password.
 
 <p align="center">
    <img src="images/ubuntu-op.png">
 </p>
+
 ## WHAT: Is included?
 
 - An up to date version of Ubuntu 20.10 for x86_64
