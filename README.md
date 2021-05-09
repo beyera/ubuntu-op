@@ -6,7 +6,7 @@ A custom-built version of Ubuntu Desktop with 1Password for Linux and 1Password 
    <img src="images/ubuntu-op.png">
 </p>
 
-## What is included
+## What's inside
 
 - An up to date version of Ubuntu 20.10 for x86_64
 - The latest version of 1Password for Linux Beta
@@ -16,14 +16,16 @@ A custom-built version of Ubuntu Desktop with 1Password for Linux and 1Password 
   - Microsoft Edge Beta
   - Brave Stable (1Password [not installed by default](https://github.com/beyera/ubuntu-op/issues/1))
 
-## What should you use this
+## Possible uses
 
 - To try out 1Password for Linux without needing to fuss about how to install applications on Linux.
 - You need to quickly bootstrap a VM and run 1Password.
 - You use 1Password and Ubuntu and want a ton of browsers installed by default.
 - Testing 1Password in a clean and reproducible environment.
 
-## Where can you get it
+## FAQ
+
+### Where can I get the iso image?
 
 To stay up to date and useful, new versions are created daily. Download the [latest build here](https://1pw.dev/download/ubuntu-op-amd64-latest.iso).
 
@@ -38,7 +40,7 @@ Or you can create a bootable USB stick on [macOS](https://ubuntu.com/tutorials/c
 
 I guess you could technically burn it to one of those DVD things too, but that feels like a waste.
 
-## Why did you make it
+### Why did you make this?
 
 A few reasons:
 
@@ -46,11 +48,11 @@ A few reasons:
 - I [came across someone who did](https://github.com/mvallim/live-custom-ubuntu-from-scratch) a lot of the hard work creating the underlying scripts which allowed me to create a 1Password version of Ubuntu quickly.
 - I couldn't sleep because my brain wanted to do this.
 
-## Why so many browsers
+### Why are so many browsers included?
 
 One of the things I use this iso for is testing 1Password for Linux with the some of the browsers 1Password lists as [fully supported](https://support.1password.com/getting-started-browser/). Feel free to file an issue or PR if you want a solo-browser built.
 
-## Who made it
+### Who made it?
 
 - **Andrew Beyer** - Maintainer of this fork and developer of customizations.
 - **Marcos Vallim** - All credit for the underlying scripts and awesome documentation goes to to [mvallim](https://github.com/mvallim) and the other [contributors](https://github.com/mvallim/live-custom-ubuntu-from-scratch/blob/master/CONTRIBUTORS.txt) of [mvallim/live-custom-ubuntu-from-scratch](https://github.com/mvallim/live-custom-ubuntu-from-scratch).
@@ -64,7 +66,9 @@ One of the things I use this iso for is testing 1Password for Linux with the som
   - Add 1Password to Gnome Dash
 - Create a sweet landing/download page. In the meantime, you can grab the [latest version here](https://1pw.dev/download/ubuntu-op-amd64-latest.iso).
 
-## License
+## For the suits
+
+### License
 
 This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details.
 
@@ -76,6 +80,6 @@ The artifacts built by this project install code from multiple open source proje
 - Microsoft (Edge)
 - Mozilla (Firefox)
 
-## Disclaimer
+### Disclaimer
 
 None of the companies listed above officially endorse this project. You assume your own risk by using any of the generated artifacts.
