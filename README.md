@@ -1,23 +1,27 @@
 # Ubuntu OP
 
-A custom-built version of Ubuntu with 1Password for Linux and 1Password officially supported browsers preinstalled. This aids in testing via a reproducible environment and a quick way for folks not familiar with Linux to try 1Password for Linux.
+A custom-built version of Ubuntu Desktop with 1Password for Linux and 1Password officially supported browsers preinstalled. Ubuntu OP is ideal for testing as a live reproducible environment or provides a quick way for folks not familiar with Linux to install Ubuntu with 1Password.
+
+<p align="center">
+   <img src="images/ubuntu-op.png">
+</p>
 
 ## What is included
 
-- An updated version of Ubuntu 20.10 for x86_64
+- An up to date version of Ubuntu 20.10 for x86_64
 - The latest version of 1Password for Linux Beta
 - The following browsers with 1Password in your browser set to install on launch
   - Firefox Stable
   - Google Chrome Stable
   - Microsoft Edge Beta
-  - Brave Stable (1Password not installed by default #1)
+  - Brave Stable (1Password [not installed by default](https://github.com/beyera/ubuntu-op/issues/1))
 
 ## What should you use this
 
-- Testing 1Password in a clean and reproducible environment.
 - To try out 1Password for Linux without needing to fuss about how to install applications on Linux.
-- You need a quickly bootstrap a VM and run 1Password.
-- You use 1Password and Ubuntu and want a ton of browsers installed
+- You need to quickly bootstrap a VM and run 1Password.
+- You use 1Password and Ubuntu and want a ton of browsers installed by default.
+- Testing 1Password in a clean and reproducible environment.
 
 ## Where can you get it
 
@@ -38,9 +42,9 @@ I guess you could technically burn it to one of those DVD things too, but that f
 
 A few reasons:
 
-- I came across someone who did a lot of the hard work creating the underlying scripts, which quickly create a new Ubuntu live iso.
-- Github has actions that are entirely free public repositories. With a little bit of automation magic, I now have an up-to-date version of Ubuntu with the latest version of 1Password and supported browsers.
-- I couldn't sleep because my brain wanted to make this.
+- Github has actions that are entirely free for public repositories. With a little bit of automation magic, I now have an up-to-date version of Ubuntu with the latest version of 1Password and supported browsers.
+- I [came across someone who did](https://github.com/mvallim/live-custom-ubuntu-from-scratch) a lot of the hard work creating the underlying scripts which allowed me to create a 1Password version of Ubuntu quickly.
+- I couldn't sleep because my brain wanted to do this.
 
 ## Why so many browsers
 
@@ -51,14 +55,14 @@ One of the things I use this iso for is testing 1Password for Linux with the som
 - **Andrew Beyer** - Maintainer of this fork and developer of customizations.
 - **Marcos Vallim** - All credit for the underlying scripts and awesome documentation goes to to [mvallim](https://github.com/mvallim) and the other [contributors](https://github.com/mvallim/live-custom-ubuntu-from-scratch/blob/master/CONTRIBUTORS.txt) of [mvallim/live-custom-ubuntu-from-scratch](https://github.com/mvallim/live-custom-ubuntu-from-scratch).
 
-## Todo
+## TODO
 
 - Create SHA256 checksum and sign it using GPG on every iso creation.
 - Test updating to Ubuntu 21.04
 - Some fun customizations
   - Default wallpaper
   - Add 1Password to Gnome Dash
-- Create a sweet landing/download page. In the meantime, you can grab the [latest version here](https://1pw.dev/download/ubuntu-op-latest.iso).
+- Create a sweet landing/download page. In the meantime, you can grab the [latest version here](https://1pw.dev/download/ubuntu-op-amd64-latest.iso).
 
 ## License
 

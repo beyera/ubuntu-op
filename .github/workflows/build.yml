@@ -28,10 +28,10 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
           private_key: ${{ secrets.PRIVATE_KEY }}
-          scp_source: scripts/ubuntu-op-latest.iso
+          scp_source: scripts/*.iso
           scp_target: ${{ secrets.UBUNTU_OP_TARGET }}
 
       - uses: actions/upload-artifact@v2
         with:
           name: ubuntu-op-latest
-          path: scripts/ubuntu-op-latest.iso
+          path: scripts/*.iso
