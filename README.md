@@ -2,7 +2,7 @@
 
 A custom-built version of Ubuntu with 1Password for Linux and 1Password officially supported browsers preinstalled. This aids in testing via a reproducible environment and a quick way for folks not familiar with Linux to try 1Password for Linux.
 
-## WHAT: Is included?
+## What is included
 
 - An updated version of Ubuntu 20.10 for x86_64
 - The latest version of 1Password for Linux Beta
@@ -12,14 +12,14 @@ A custom-built version of Ubuntu with 1Password for Linux and 1Password official
   - Microsoft Edge Beta
   - Brave Stable (1Password not installed by default #1)
 
-## WHEN: Should you use this?
+## What should you use this
 
 - Testing 1Password in a clean and reproducible environment.
 - To try out 1Password for Linux without needing to fuss about how to install applications on Linux.
 - You need a quickly bootstrap a VM and run 1Password.
 - You use 1Password and Ubuntu and want a ton of browsers installed
 
-## WHERE: Can you get it?
+## Where can you get it
 
 To stay up to date and useful, new versions are created daily. Download the [latest build here](https://1pw.dev/download/ubuntu-op-amd64-latest.iso).
 
@@ -34,7 +34,7 @@ Or you can create a bootable USB stick on [macOS](https://ubuntu.com/tutorials/c
 
 I guess you could technically burn it to one of those DVD things too, but that feels like a waste.
 
-## WHY: Did you make it?
+## Why did you make it
 
 A few reasons:
 
@@ -42,7 +42,11 @@ A few reasons:
 - Github has actions that are entirely free public repositories. With a little bit of automation magic, I now have an up-to-date version of Ubuntu with the latest version of 1Password and supported browsers.
 - I couldn't sleep because my brain wanted to make this.
 
-## WHO: Made it?
+## Why so many browsers
+
+One of the things I use this iso for is testing 1Password for Linux with the some of the browsers 1Password lists as [fully supported](https://support.1password.com/getting-started-browser/). Feel free to file an issue or PR if you want a solo-browser built.
+
+## Who made it
 
 - **Andrew Beyer** - Maintainer of this fork and developer of customizations.
 - **Marcos Vallim** - All credit for the underlying scripts and awesome documentation goes to to [mvallim](https://github.com/mvallim) and the other [contributors](https://github.com/mvallim/live-custom-ubuntu-from-scratch/blob/master/CONTRIBUTORS.txt) of [mvallim/live-custom-ubuntu-from-scratch](https://github.com/mvallim/live-custom-ubuntu-from-scratch).
@@ -70,4 +74,4 @@ The artifacts built by this project install code from multiple open source proje
 
 ## Disclaimer
 
-Any of the companies listed above does not officially endorse this project. You assume your own risk by using any of the generated artifacts.
+None of the companies listed above officially endorse this project. You assume your own risk by using any of the generated artifacts.

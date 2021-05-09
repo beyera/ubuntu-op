@@ -113,8 +113,9 @@ function customize_image() {
     install_1password
 
     # install browsers
-    apt install -y firefox
     install_brave
+    install_edge
+    apt install -y firefox
     install_google_chrome
     install_b5x
 
